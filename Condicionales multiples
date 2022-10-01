@@ -1,0 +1,44 @@
+/*El Dpto. de Tránsito y Seguridad Vial desea saber de los “n” autos que entran a la ciudad
+de Lima, cuantos entran con calcomanía de cada color. Conociendo el último dígito de la
+placa (considerar como número entero) de cada automóvil se puede determinar el color de
+la calcomanía utilizando la siguiente relación: (Considerando que solo ingresen un solo dígito)
+                    ultimoDigito      color
+                      1, 2          amarillo
+                      3, 4          rosa
+                      5, 6          rojo
+                      7, 8          verde
+                      9, 0          azul
+*/
+#include <iostream>
+ 
+using namespace std;
+ 
+int main()
+{
+    int autos, digito;
+    int amarillo, rosa, roja, verde, azul;
+    int i = 0;
+    amarillo = 0;
+    rosa = 0;
+    roja = 0;
+    verde = 0;
+    azul = 0;
+ 
+    cout<<"Digite la cantidad de autos \n -> "; cin>>autos;
+    while (i < autos){
+        cout << "Digite el ultimo digito del auto "<<i+1<<":\n -> "; cin>>digito;
+        switch (digito){
+        case 1: case 2: amarillo++; break;
+        case 3: case 4: rosa++; break;
+        case 5: case 6: roja++; break;
+        case 7: case 8: verde++; break;
+        case 9: case 0: azul++; break;
+        }
+    	i++;
+    }
+    cout<<"Numero de autos de color\n- Amarillas: "<<amarillo<<endl;
+    cout<<"- Rosas "<<rosa<<endl;
+    cout<<"- Rojas: "<<roja<<endl;
+    cout<<"- Verdes: "<<verde<<endl;
+    cout<<"- Azules "<<azul<<endl;
+}
